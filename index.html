@@ -1,11 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conference Registration</title>
 </head>
 <body>
-    
+  <header><h1>Conference Registration Form</h1></header>
+  <main>
+    <form action="https://helper-htmlform-for-students.onrender.com/form-data" method="post">
+
+    <fieldset>
+      <legend>Personal Information</legend>
+
+      <label for="fullName">Full Name:</label>
+      <input type="text" id="fullName" name="fullName" minlength="2" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="phone">Phone:</label>
+      <input type="tel" id="phone" name="phone">
+    </fieldset>
+
+    <fieldset>
+      <legend>Ticket & Workshops</legend>
+
+      <fieldset>
+        <legend>Ticket Type</legend>
+
+        <label for="ticketType">Ticket Type:</label>
+        <select id="ticketType" name="ticketType" required>
+          <option value="">Please choose an option</option>
+          <option value="standard">Standard</option>
+          <option value="vip">VIP</option>
+          <option value="student">Student</option>
+        </select>
+      </fieldset>
+
+      <fieldset>
+        <legend>Workshops</legend>
+
+        <label><input type="checkbox" name="workshops" value="webPerformance">Web Performance</label>
+        <label><input type="checkbox" name="workshops" value="accessibility">Accessibility</label>
+        <label><input type="checkbox" name="workshops" value="testing">Testing</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Diet</legend>
+
+        <label><input type="radio" name="diet" value="none">None</label>
+        <label><input type="radio" name="diet" value="vegan">Vegan</label>
+        <label><input type="radio" name="diet" value="kosher">Kosher</label>
+        <label><input type="radio" name="diet" value="halal">Halal</label>
+        <label><input type="radio" name="diet" value="other">Other</label>
+      </fieldset>
+    </fieldset>
+
+    <fieldset>
+      <legend>Payment Details</legend>
+
+      <label for="cardNumber">Card number:</label>
+      <input type="text" id="cardNumber" name="cardNumber" pattern="^(\d{4} ?){3,4}$" maxlength="19" placeholder="1234 5678 1234 5678" required>
+      
+      <label for="expiryDate">Expiry date:</label>
+      <input type="month" id="expiryDate" name="expiryDate" min="2025-08" required>
+      
+      <label for="cvv">CVV:</label>
+      <input type="password" id="cvv" name="cvv" pattern="\d{3,4}" maxlength="4" placeholder="•••" required>
+    </fieldset>
+
+    <fieldset>
+      <legend>Agreements</legend>
+      
+      <label><input type="checkbox" name="terms" required>I agree to the terms and conditions</label>
+    </fieldset>
+
+    <button type="submit">Send Data</button>
+    </form>
+  </main>
 </body>
 </html>
