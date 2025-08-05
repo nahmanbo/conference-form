@@ -73,6 +73,15 @@
 
     <fieldset>
         <legend>Payment Details</legend>
+
+        <label for="card number">Card number:</label>
+        <input type="text" id="card number" name="card number" pattern="^(\d{4} ?){3,4}$" maxlength="19" placeholder="1234 5678 1234 5678"> required>
+
+        <label for="expiry date">Expiry date:</label>
+        <input type="month" id="expiry date" name="expiry date" min="2025-08" required>
+
+        <label for="cvv">CVV:</label>
+        <input type="password" id="cvv" name="cvv" pattern="\d{3, 4}" maxlength="4" placeholder="•••" required>
     </fieldset>
 
     <fieldset>
@@ -82,5 +91,5 @@
 
     <button type="submit">Send Data</button>
     </form>
-</body>
+</body> 
 </html>
